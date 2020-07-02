@@ -1,0 +1,174 @@
+﻿@charset "utf-8";
+
+@font-face{
+    font-family: Champagne;
+    src: url('../fonts/cac_champagne.woff') format('woff'),
+        url('../fonts/cac_champagne.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: Dobkin;
+    src: url('../fonts/DobkinPlain.woff') format('woff'),
+        url('../fonts/DobkinPlain.ttf') format('truetype');
+}
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Suresh Shrestha  
+   Date:   9/10/2019
+   
+   Filename: lake_styles.css
+
+*/
+
+/* General Styles */
+html {
+    background-color : rgb(3, 55, 69);
+}
+
+body {
+    color: rgb(75, 75, 75);
+    background-color: rgb(140, 185, 216);
+    font-family: Verdana, Geneva, sans-serif
+}
+
+nav a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+/* Header Navigation */
+body > header > nav {
+    background-color: rgb(21, 92, 156);
+}
+
+body > header > nav > ul > li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+body > header a:link, body > header a:visited  {
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+body > header a:hover, body > header a:active  {
+    color: hsl(56, 72%, 68%);
+}
+
+/* Left Column Styles */
+section#leftcol {
+    background-color: lightblue; 
+}
+
+section#leftcol > h1 {
+    font-family: Champagne, cursive;
+    font-size: 5em;
+    margin: 5px 0px 5px 15px;
+    padding: 0;
+}
+
+section#leftcol > p {
+    margin: 25px;
+}
+
+/* Right Column Styles */
+section#rightcol h2 {
+    font-family: Champagne, cursive;
+    font-size: 2em;
+    margin: 10px 2px;
+    padding: 0;
+}
+
+section#rightcol ul {
+    font-size: 1em;
+    padding-left: 25px;
+    list-style-type: none;
+}
+
+section#rightcol nav > ul > li > a:link, 
+section#rightcol nav > ul > li > a:visited  {
+    color: hsl(250, 6%, 39%);
+    text-decoration: none;
+}
+
+section#rightcol nav > ul > li > a:hover, 
+section#rightcol nav > ul > li > a:active  {
+    color: hsl(250, 5%, 10%);
+    text-decoration: underline;
+}
+
+/* Blockquote Styles */
+blockquote {
+    font-size: 1.5em;
+    font-family: Dobkin, Georgia, 'Times New Roman', Times, serif;
+    color: rgba(54, 4, 52, 0.75);
+    quotes: "\201C" "\201D";
+    margin: 75px 10px 30px 0px;
+    padding: 10px;
+}
+
+blockquote::before {
+    content: open-quote;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+blockquote::after {
+    content: close-quote;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Aside Styles */
+aside:first-of-type {
+    background-color: hsl(238, 30%, 72%);
+}
+
+aside:last-of-type {
+    background-color: hsl(145, 27%, 61%);
+}
+
+aside h1 { 
+    font-family: Champagne, cursive;
+    text-align: center;
+    margin: 5px;
+    font-size: 2.5em;
+} 
+
+aside h2 { 
+    text-align: left;
+    margin: 5px 5px 10px 15px;
+    font-size: 1.1em;
+} 
+
+aside ul {
+    list-style-type: square;
+}
+
+aside li {
+    font-size: 0.9em;
+    margin-right: 15px;
+    line-height: 2em;
+}
+
+aside p {
+    font-size: 0.9em;
+    margin: 5px 15px 25px 25px;
+}
+
+/*Footer Styles*/
+footer {
+    background-color: rgb(21, 92, 156);
+    color: white;
+    font: normal small-caps bold 0.9em/3em
+        Verdana, Geneva, sans-serif;
+    text-align: center;
+}

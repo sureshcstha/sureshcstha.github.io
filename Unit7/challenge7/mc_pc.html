@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 
+        New Perspectives on HTML and XHTML
+        Tutorial 7
+        Case Problem 4
+        
+        Millennium Computers Online Order Form
+        Author: Suresh Shrestha
+        Date:   10/3/2019
+
+        Filename:         mc_pc.html
+-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />       
+        <title>Millennium Computers Online Order Form</title>
+        <link href="styles/mc_reset.css" rel="stylesheet" />
+        <link href="styles/mc_styles.css" rel="stylesheet" />
+        <link href="styles/mc_forms.css" rel="stylesheet" />
+        <script src="scripts/mc_script.js"></script>
+
+</head>
+        
+<body>
+        <header>
+        <img src="images/mc_logo.png" alt="Millennium Computers" id="logoimg" />
+                <nav>
+                        <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Order</a></li>
+                                <li><a href="#">Contact</a></li>
+                        </ul>
+                </nav>
+        </header> 
+
+<section>
+        <h1>Online Computer Order Form</h1>
+        <p>Required values are marked by an asterisk (*)</p>
+        
+        <form id="order" action="http://www.mill_computers.com/orders/processs.cgi" method="post">
+        
+                <fieldset id="custInfo">
+                        <legend>Customer Information</legend>
+                        
+                        <div class="formRow">
+                        <label for="fName">First Name*</label>
+                        <input type="text" name="fName" id="fName" placeholder="first name" required />
+                        </div>
+
+                        <div class="formRow">
+                        <label for="lName">Last Name*</label>
+                        <input type="text" name="lName" id="lName" placeholder="last name" required />
+                        </div>
+
+                        <div class="formRow">
+                        <label for="street">Street Address*</label>
+                        <input type="text" name="street" id="street" required />
+                        </div>
+
+                        <div class="formRow">
+                        <label for="city">City*</label>
+                        <input type="text" name="city" id="city" required />
+                        </div>
+                        
+                        <div class="formRow">
+                        <label for="state">State*</label>
+                        <input type="text" name="state" id="state" required />
+                        </div>
+
+                        <div class="formRow">
+                        <label for="zip">Zip*</label>
+                        <input type="text" name="zip" id="zip" placeholder="nnnnn-nnnn" 
+                        pattern="^\d{5}(-\d{4})?$" required />
+                        </div>
+
+                        <div class="formRow">
+                        <label for="phone">Phone*</label>
+                        <input type="text" name="phone" id="phone" placeholder="(nnn)nnn-nnnn" 
+                        pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required/>
+                        </div>
+                </fieldset>
+                
+
+                <fieldset>
+                        <legend>Computer Specifications</legend>
+                        
+                        <div class="formRow">
+                                <label for="pSpeed">Processor Speed</label>
+                                <select name="pSpeed" id="pSpeed">
+                                        <option value="3.2">3.2 GHz</option>
+                                        <option value="4.0">4.0 GHz</option>
+                                        <option value="5.2">5.2 GHz</option>
+                                </select>
+                        </div>
+                        
+                        <div class="formRow">
+                                <label for="mem">Memory</label>
+                                <select name="mem" id="mem">
+                                        <option value="1">1 GB</option>
+                                        <option value="2">2 GB</option>
+                                        <option value="4">4 GB</option>
+                                        <option value="8" selected>8 GB</option>
+                                </select>
+                        </div>
+                        
+                        <div class="formRow">
+                                <label for="monitor">Monitor Size</label>
+                                <select name="monitor" id="monitor">
+                                        <option value="15">15"</option>
+                                        <option value="17">17"</option>
+                                        <option value="19" selected>19"</option>
+                                        <option value="21">21"</option>
+                                </select>
+                        </div>
+
+                        <div class="formRow">
+                                <label for="hd">Hard Drive</label>
+                                <select name="hd" id="hd">
+                                        <option value="240">240 GB</option>
+                                        <option value="500">500 GB</option>
+                                        <option value="750">750 GB</option>
+                                        <option value="1tb" selected>1 TB</option>
+                                </select>
+                        </div>
+                        
+                        <div class="formRow">
+                        <label>DVD Burner</label>
+                        <fieldset class="optGroup">
+                                <label for="dYes">Yes</label>
+                                <input type="radio" name="dvd" id="dYes" value="yes" />
+                                                
+                                <label for="dNo">No</label>
+                                <input type="radio" name="dvd" id="dNo" value="no" />
+                        </fieldset>
+                        </div>
+                        
+                        <div class="formRow">
+                        <label>Tuner Card</label>
+                        <fieldset class="optGroup">
+                                <label for="tYes">Yes</label>
+                                <input type="radio" name="tuner" id="tYes" value="yes" />
+                                                
+                                <label for="tNo">No</label>
+                                <input type="radio" name="tuner" id="tNo" value="no" />
+                        </fieldset>
+                        </div>
+                        
+                        <div class="formRow">
+                        <label>Media Card Reader</label>
+                        <fieldset class="optGroup">
+                                <label for="mYes">Yes</label>
+                                <input type="radio" name="mCard" id="mYes" value="yes" />
+                                                
+                                <label for="mNo">No</label>
+                                <input type="radio" name="mCard" id="mNo" value="no" />
+                        </fieldset>
+                        </div>
+
+                        <input name="warranty" id="warranty" value ="yes" type="checkbox" />
+                        <label for="warranty">Add 24-month extended warranty</label>
+                        
+                </fieldset>
+
+                <label for="commBox">Additional Information/Comments:</label>
+                <textarea name="comments" id="commBox"></textarea>
+                
+                <div id="buttons">
+                        <input type="submit" value="Send Order" />
+                        <input type="reset" value="Cancel Order" />
+                        <input type="submit" value="Contact Me" />
+                </div>
+                
+        </form>
+</section>        
+
+<footer>
+Millennium Computers &nbsp;&nbsp;&nbsp;&nbsp; 
+2314 Washington Blvd, Ogden, UT 84401 &nbsp;&nbsp;&nbsp;&nbsp; 
+(801) 626-8820
+</footer>
+
+</body>
+</html>

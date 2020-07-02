@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+</head>
+<body>
+
+  <h1>About Me</h1>
+  
+  <ul>
+    <li>Nickname: <span id="nickname"></span></li>
+    <li>Favorites:  <span id="favorites"></span></li>
+    <li>Hometown: <span id="hometown"></span></li>
+   </ul>
+  
+   <script>
+    document.body.style.fontFamily = 'Arial, sans-serif'; //font family of "Arial, sans-serif"
+    document.getElementById('nickname').innerHTML = 'Suru'; //replace nickname
+    document.getElementById('favorites').innerHTML = 'Nepali Momo, Cafe Latte, and Danish Butter Cookies';
+    document.getElementById('hometown').innerHTML = 'Kathmandu, Nepal'; // replace hometown
+
+    
+
+    var items = document.getElementsByTagName('li');
+    //Iterate through each li
+    for (var i = 0; i < items.length; i++) {
+       items[i].className = 'listitem'; //change the class to "listitem"
+    }
+    
+    //Add a style tag that sets a rule for "listitem" to make the color red
+    var styleSheetElement = document.createElement('style');
+    styleSheetElement.type = 'text/css';
+    styleSheetElement.innerHTML = '.listitem { color: red; }';
+    document.head.appendChild(styleSheetElement);
+     
+     var myPicture  = document.createElement('img'); //create a new img element
+     myPicture.src = "images/headshot.jpg"; //set its src attribute to a picture of you
+     document.body.appendChild(myPicture); //append picture to the page
+
+     var newA = document.createElement('a');
+     newA.setAttribute('href',"bookList.html");
+     newA.innerHTML = "Go to My Book List page";
+     document.body.prepend(newA); //prepend link
+
+   </script>
+
+ </body>
+</html>
+
